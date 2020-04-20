@@ -6,7 +6,7 @@ struct usuario{
 
 	char nombreUsuario[100];
 	char contrasena[200];
-	char genero[1];
+	char genero;
 };
 
 int main(){
@@ -51,7 +51,7 @@ int main(){
 					
 					//Miremos cuantos usuarios ya hay en ese fichero y guardas en vector
 					i=0;
-					while(fscanf(vpfichero,"%s %s %s",&datos[i].nombreUsuario ,&datos[i].contrasena ,&datos[i].genero )!=EOF){
+					while(fscanf(vpfichero,"%s %s %c",&datos[i].nombreUsuario ,&datos[i].contrasena ,&datos[i].genero )!=EOF){
 						nusuario++;
 						i++;
 					}
@@ -70,7 +70,7 @@ int main(){
 					fflush(stdin);
 					scanf("%s",contrasenaInicio);
 					
-					//Tenemos que ver que efectivamente existe ese usuario y contraseña.
+					//Tenemos que ver que efectivamente existe ese usuario y contraseÒa.
 					for(i=0;i<nusuario;i++){
 							if(strcmp(usuarioInicio,datos[i].nombreUsuario)==0 && strcmp(contrasenaInicio,datos[i].contrasena)==0){
 								igual=1;
@@ -86,7 +86,7 @@ int main(){
 							printf("Usuario valido\n");
 						}
 						system("PAUSE");
-					}while(igual==0);//Eso es que serían diferentes y no vuelve a preguntar.
+					}while(igual==0);//Eso es que serÌan diferentes y no vuelve a preguntar.
 				
 					
 					break;
@@ -97,7 +97,7 @@ int main(){
 					vpfichero= fopen("usuarios.txt","r");//Modo lectura para ver usuarios
 					
 					
-					//Comprobación por si acaso de que existe una vez creado
+					//ComprobaciÛn por si acaso de que existe una vez creado
 					if(vpfichero==NULL){
 					printf("No se ha podido encontrar el fichero\n");
 					return 0;
@@ -105,7 +105,7 @@ int main(){
 					
 					//Miremos cuantos usuarios ya hay en ese fichero y introduce a un vector
 					i=0;
-					while(fscanf(vpfichero,"%s\n%s\n%s\n",datos[i].nombreUsuario ,datos[i].contrasena ,datos[i].genero )!=EOF){
+					while(fscanf(vpfichero,"%s %s %c",datos[i].nombreUsuario ,datos[i].contrasena ,&datos[i].genero )!=EOF){
 						nusuario++;
 						i++;
 					}
@@ -134,7 +134,7 @@ int main(){
 							//system("PAUSE");
 						}else{
 							printf("Usuario valido\n");
-							//strcpy(datos[nusuario].nombreUsuario,"\n");
+							
 							strcpy(datos[nusuario].nombreUsuario,usuarioInicio);
 						}
 						
@@ -145,16 +145,20 @@ int main(){
 					scanf("%s",datos[nusuario].contrasena);
 					printf("Introduce genero(H-Hombre o M-Mujer):\n");
 					fflush(stdin);
-					scanf("%s",datos[nusuario].genero);
+					scanf("%c",&datos[nusuario].genero);
 					
+					for(i=0;i<=nusuario;i++){
+						printf("%s %s %c\n",datos[i].nombreUsuario,datos[i].contrasena,datos[i].genero);
+					}
+				
 					//Abro en modo escritura
 					vpfichero= fopen("usuarios.txt","w");
 					
 					
-					//Ahora lo imprimo al fichero añado estos datos.
+					//Ahora lo imprimo al fichero aÒado estos datos.
 					for(i=0;i<=nusuario;i++){
 				
-						fprintf(vpfichero,"%s\n%s\n%s",datos[i].nombreUsuario,datos[i].contrasena,datos[i].genero);
+						fprintf(vpfichero,"%s\n%s\n%c\n",datos[i].nombreUsuario,datos[i].contrasena,datos[i].genero);
 					}
 					
 					//Tercer paso cerrar el fichero
@@ -189,7 +193,7 @@ int main(){
 						}else if(info=='c'){
 							break; 
 						}else{
-							printf("Opción no disponible\n");
+							printf("OpciÛn no disponible\n");
 						}
 						
 						system("PAUSE");
@@ -294,7 +298,7 @@ int main(){
 				printf("Ha sido toda una aventura tu primer dia. Has hecho amigos y jugado mucho\n");
 				puntosVida+=10;
 			}else{
-				printf("Definitivamente mama era mejor compañera de juegos...Menudo dia\n");
+				printf("Definitivamente mama era mejor compaÒera de juegos...Menudo dia\n");
 				puntosVida+=1;
 			}
 			system("PAUSE");
@@ -303,8 +307,8 @@ int main(){
 			printf("----------------ETAPA INFANCIA------------------------\n");
 			printf("Bienvenido al colegio,que nervios\n");
 		
-			printf("Este es tu primer día de clase:\n");
-			printf("a-No lloro ya soy mayor, me pongo a jugar con otros niños\nb-Entro timidamente,me pongo a jugar solo pero luego me uno a los demás\nc-Me tiro al suelo, me pongo a llorar y me agarro al pie de mi madre. NO QUIEROOO\n");
+			printf("Este es tu primer dÌa de clase:\n");
+			printf("a-No lloro ya soy mayor, me pongo a jugar con otros niÒos\nb-Entro timidamente,me pongo a jugar solo pero luego me uno a los dem·s\nc-Me tiro al suelo, me pongo a llorar y me agarro al pie de mi madre. NO QUIEROOO\n");
 			fflush(stdin);
 			scanf("%c",&decision);
 		
@@ -324,7 +328,7 @@ int main(){
 		do{
 			
 			printf("----------------------------------------------\n");
-			printf("Ya han pasado muchos años y el perro de la familia a muerto:\n");
+			printf("Ya han pasado muchos aÒos y el perro de la familia a muerto:\n");
 			printf("Tus padres te preguntan si quieres otra mascota ya que te ven triste. Que decides?");
 			printf("a-No quiero una mascota nueva\nb-Un pez de feria\nc-Un hamster\n");
 			fflush(stdin);
@@ -350,7 +354,7 @@ int main(){
 		printf("Vas a pasar a primaria y temes que te cambien de clase y te separen de tu mejor amigo\n");
 		printf("\n");
 		if(puntosVida%2==0){
-				printf("Vaya tu amigo no está en la misma clase, mala suerte pero os veis en los recreos\n");
+				printf("Vaya tu amigo no est· en la misma clase, mala suerte pero os veis en los recreos\n");
 				puntosVida+=1;
 			}else{
 				printf("Bien!! Ambos estais en la misma clase menuda suerte\n");
@@ -368,20 +372,20 @@ int main(){
 			scanf("%c",&decision);
 		
 		
-			if(decision=='a'&& puntosVida>=10){
-				printf("Es lo más sensato, bien hecho\n");
+			if(decision=='a'&& puntosVida>=20){
+				printf("Es lo m·s sensato, bien hecho\n");
 				
-			}else if(decision=='b' && puntosVida>=30){
-				printf("Vaya has llegado por los pelos, ten más cuidado a la proxima!\n");
+			}else if(decision=='b' && puntosVida>=29){
+				printf("Vaya has llegado por los pelos, ten m·s cuidado a la proxima!\n");
 			
-			}else if(decision=='a'&& puntosVida<10){
-				printf("Tu no has pasado pero otros de tus compañero si. Eso ha asustado a un conductor y ha desviado su coche. Te han atropellado\n");
+			}else if(decision=='a'&& puntosVida<20){
+				printf("Tu no has pasado pero otros de tus compaÒero si. Eso ha asustado a un conductor y ha desviado su coche. Te han atropellado\n");
 				
 				//Aqui veremos puntos de muerte y destino
 				//printf("redactar historia de muerte");
 				
 				return 0;
-			}else if(decision=='b' && puntosVida<30){
+			}else if(decision=='b' && puntosVida<29){
 				printf("No te ha dado tiempo y un conductor despistado te ha atropellado...\n");
 				
 				//Aqui veremos puntos de muerte y destino
@@ -392,6 +396,142 @@ int main(){
 			}
 			system("PAUSE");
 		}while(decision!='a' && decision!='b' && decision!='c');
+		
+		do{
+			printf("\n");
+			printf("----------------ETAPA ADOLESCENCIA------------------------\n");
+			printf("La semana que viene vas a empezar el instituto y tu madre te lleva a comprar ropa\n");
+		
+			printf(" A por que estilo vas?\n");
+			printf("a-Sencillo y basico\nb-Llamativo y moderno, me gusta ser el centro de atencion.\nc-Emo. Odio todo y a todos\n");
+			fflush(stdin);
+			scanf("%c",&decision);
+		
+		
+			if(decision=='a'){
+				puntosVida+=5;
+			}else if(decision=='b'){
+				puntosVida+=10;
+			}else if(decision=='c'){
+				puntosVida+=1;
+			}else{
+				printf("Has introducido mal la opcion. Solo vale a,b o c\n");
+			}
+			system("PAUSE");
+		}while(decision!='a' && decision!='b' && decision!='c');
+		
+			do{
+			
+			printf("----------------------------------------------\n");
+			printf("Por ?n ha llegado el dÌa, hoy comienzas el instituto! Tienes miedo de que te separen de tus amigos porque os junt·is con gente nueva.\n");
+			printf(" Como te relacionas con el resto?:");
+			printf("a-me quedo en mi mesa, no soy muy social.\nb-Aunque me cueste un poco hablo con casi todo el mundo, hay que ir conociendo a la gente\nc-Desde el dÌa 1 soy el/la popular de clase, todos me conocen.\n");
+			fflush(stdin);
+			scanf("%c",&decision);
+		
+		
+			if(decision=='a'){
+				printf("Deberias hablar con la gente, podrias llevarte una agradable sorpresa\n");
+				puntosVida+=1;
+			}else if(decision=='b'){
+				printf("Eso es! hay que ir conociendo a la gente nueva\n");
+				puntosVida+=10;
+			}else if(decision=='c'){
+				printf("Ten en cuenta que ahora estas en el punto de mira, ten cuidado...\n");
+				puntosVida+=5;
+			}else{
+				printf("Has introducido mal la opcion. Solo vale a,b o c\n");
+			}
+			system("PAUSE");
+		}while(decision!='a' && decision!='b' && decision!='c');
+		
+			do{
+			printf("----------------------------------------------\n");
+			printf("Como es tu grupo de amigos?\n");
+			printf("a-muy grande, somos mucha gente porque somos muy sociables\nb-no somos muchos, pero nos bastamos para pasarlo bien.\nc-Amigos?Que es eso?se come?\n");
+			fflush(stdin);
+			scanf("%c",&decision);
+		
+			if(decision=='a'){
+				puntosVida+=5;
+			}else if(decision=='b'){
+				puntosVida+=10;
+			}else if(decision=='c'){
+				puntosVida+=1;
+			}else{
+				printf("Has introducido mal la opcion. Solo vale a,b o c\n");
+			}
+			system("PAUSE");
+		}while(decision!='a' && decision!='b' && decision!='c');
+		
+			do{
+			printf("----------------------------------------------\n");
+			printf("Los estudios se empiezan a poner serios y va siendo hora de ponerse un poco serio para poder elegir una carrera:\n");
+			printf("Como llevas el tema de estudiar?\n");
+			printf("a-eso de estudiar a mÌ no me gusta nada, si hace falta me pongo a currar pronto\nb-estudio y me esfuerzo, pero no me mato por sacar las mejores notas\nc-Me esfuerzo mucho por sacar las mejores notas posibles, quiero acceder a una buena carrera.\n");
+			fflush(stdin);
+			scanf("%c",&decision);
+		
+			if(decision=='a'){
+				printf("Tu madre te acaba convenciendo para que estudies, asi podras tener un futuro mejor\n");
+				puntosVida+=1;
+			}else if(decision=='b'){
+				printf("sigue asi, pero no te relajes.\n");
+				puntosVida+=5;
+			}else if(decision=='c'){
+				printf("Animo no te rindas!\n");
+				puntosVida+=10;
+			}else{
+				printf("Has introducido mal la opcion. Solo vale a,b o c\n");
+			}
+			system("PAUSE");
+		}while(decision!='a' && decision!='b' && decision!='c');
+		
+			do{
+			printf("----------------------------------------------\n");
+			printf("\n");
+			printf("Acabas de terminar 2∫ de Bachiller, no sabes ni como ha pasado tan r·pido, pero ahora toca pasar el mejor verano de tu vida\n");
+			printf("En que inviertes tu tiempo?\n");
+			printf("a-Me voy de viaje con mis amigos y me paso el verano de fiesta en fiesta, hay que celebrarlo!\nb-viajo con mis amigos y salgo a alguna fiesta, pero tambiÈn disfruto de la tranquilidad del verano\nc-No me gusta el verano, asÌ que me lo paso en casa.\n");
+			fflush(stdin);
+			scanf("%c",&decision);
+		
+			if(decision=='a'){
+				puntosVida+=10;
+			}else if(decision=='b'){
+				puntosVida+=5;
+			}else if(decision=='c'){
+				puntosVida+=1;
+			}else{
+				printf("Has introducido mal la opcion. Solo vale a,b o c\n");
+			}
+			system("PAUSE");
+		}while(decision!='a' && decision!='b' && decision!='c');
+		
+		do{
+			printf("----------------------------------------------\n");
+			printf("\n");
+			printf("El verano vuela! Sin darte cuenta ha llegado septiembre y te toca empezar la carrera.\n");
+			printf("Que carrera has elegido?\n");
+			printf("a-Medicina\nb-Magisterio\nc-Una ingenieria\n");
+			fflush(stdin);
+			scanf("%c",&decision);
+		
+			if(decision=='a'){
+				printf("Va a ser un camino duro, te saldran callos en los codos");
+				puntosVida+=10;
+			}else if(decision=='b'){
+				printf("Mucha suerte con los collares de macarrones, confiamos en ti.");
+				puntosVida+=5;
+			}else if(decision=='c'){
+				printf("Mucha suerte y mucho animo");
+				puntosVida+=1;
+			}else{
+				printf("Has introducido mal la opcion. Solo vale a,b o c\n");
+			}
+			system("PAUSE");
+		}while(decision!='a' && decision!='b' && decision!='c');
+		
 		}
 	}while(opcion!='d');
 }
