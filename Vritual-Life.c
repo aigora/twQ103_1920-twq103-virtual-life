@@ -532,6 +532,320 @@ int main(){
 			system("PAUSE");
 		}while(decision!='a' && decision!='b' && decision!='c');
 		
+		do{
+			//EDAD ADULTO FORMADO 
+			printf("\n");
+			printf("---------------ETAPA ADULTO FORMADO------------------------\n");
+			printf("----------------------------------------------\n");
+			printf("\n");
+			printf("Echas de menos a tu ex\n");
+			printf("Que haces?\n");
+			printf("a-Llamarle al movil\nb-Ir a su casa a hablar\nc-Quedarme en casa llorando\n");
+			fflush(stdin);
+			scanf("%c",&decision);
+		
+			if(decision=='a'){
+				puntosVida+=10;
+			}else if(decision=='b'){
+				puntosVida+=5;
+			}else if(decision=='c'){
+				puntosVida+=1;
+			}else{
+				printf("Has introducido mal la opcion. Solo vale a,b o c\n");
+			}
+			system("PAUSE");
+		}while(decision!='a' && decision!='b' && decision!='c');
+		do{
+			printf("----------------------------------------------\n");
+			printf("\n");
+			printf("Cual te gustaria que fuese tu situacion personal actual?\n");
+			printf("a-Ella perrea sola, madurez? Que es eso?\nb- Mi familia lo es todo para mi\nc-Mi pareja y yo no queremos hijos la verdad\n");
+			fflush(stdin);
+			scanf("%c",&decision);
+		
+			if(decision=='a'){
+				puntosVida+=1;
+			}else if(decision=='b'){
+				puntosVida+=10;
+			}else if(decision=='c'){
+				puntosVida+=5;
+			}else{
+				printf("Has introducido mal la opcion. Solo vale a,b o c\n");
+			}
+			system("PAUSE");
+		}while(decision!='a' && decision!='b' && decision!='c');
+		do{
+			printf("----------------------------------------------\n");
+			printf("\n");
+			printf("Cual te gustaria que fuese tu situacion laboral actual?\n");
+			printf("a-Estoy creando una pequeña empresa que esta despegando\nb-Trabajo en una gran empresa, aunque mi jefe me tiene mania y no tiene pinta de que me vaya a ascender\nc-Trabajo en la empresa familiar\n");
+			fflush(stdin);
+			scanf("%c",&decision);
+		
+			if(decision=='a'){
+				puntosVida+=10;
+			}else if(decision=='b'){
+				puntosVida+=5;
+			}else if(decision=='c'){
+				puntosVida+=1;
+			}else{
+				printf("Has introducido mal la opcion. Solo vale a,b o c\n");
+fflush(stdin);
+			scanf("%c",&decision);
+		
+		
+			if(decision=='a'&& puntosVida>=20){
+				print("HAS SUFRIDO UN TRAJICO ACCIDENTE Y HAS MUERTO\n");
+				
+			}else if(decision=='b' && puntosVida>=29){
+				printf("Muy bien, andar 30 minutos a dia es lo mas recomendable\n");
+			
+			}else if(decision=='a'&& puntosVida<20){
+				printf("Por esfuerzos como este confia en ti, eres el mejor representante de la empresa\n");
+				
+				//Aqui veremos puntos de muerte y destino
+				//printf("redactar historia de muerte");
+				
+				return 0;
+			}else if(decision=='b' && puntosVida<29){
+				printf("Bro has llegado tarde, te han despedido\n");
+				
+				//Aqui veremos puntos de muerte y destino
+				//printf("redactar historia de muerte");
+				return 0;
+			}else{
+				printf("Has introducido mal la opcion. Solo vale a o b\n");
+			}
+			system("PAUSE");
+		}while(decision!='a' && decision!='b' && decision!='c');			}
+			system("PAUSE");
+		}while(decision!='a' && decision!='b' && decision!='c');
+		do{
+			printf("----------------------------------------------\n");
+			printf("\n");
+			printf("Tu pareja y tu vais a tener un hijo!\n");
+			printf("a-Abortamos, no queremos hijos\nb-Lo tenemos y ya veremos lo que pasa\nc-Vamos a tenerlo todo planead cuando llegue, a ese bebe no le va a faltar de nada\n");
+			fflush(stdin);
+			scanf("%c",&decision);
+		
+			if(decision=='a'){
+				puntosVida+=1;
+			}else if(decision=='b'){
+				puntosVida+=5;
+			}else if(decision=='c'){
+				puntosVida+=10;
+			}else{
+				printf("Has introducido mal la opcion. Solo vale a,b o c\n");
+			}
+			system("PAUSE");
+		}while(decision!='a' && decision!='b' && decision!='c');
+		do{
+			
+			printf("--------------DECISION IMPORTANTE---------------------\n");
+			
+			printf("Estas llegando tarde a una cita con uno de los proveedores mas importantes para la empresa y el mas exigente, sus representantes siempre miran por encima del hombro con superioridad\n");
+			printf("Que vas a hacer?");
+			printf("a-Cojo el coche y piso el acelerador\nb-Voy andando, hay que mantenerse en forma\n");
+			fflush(stdin);
+			scanf("%c",&decision);
+		
+		
+			if(decision=='a'&& puntosVida>=20){
+				print("HAS SUFRIDO UN TRAJICO ACCIDENTE Y HAS MUERTO\n");
+				
+			}else if(decision=='b' && puntosVida>=29){
+				printf("Muy bien, andar 30 minutos a dia es lo mas recomendable\n");
+			
+			}else if(decision=='a'&& puntosVida<20){
+				printf("Por esfuerzos como este confia en ti, eres el mejor representante de la empresa\n");
+				
+				//Aqui veremos puntos de muerte y destino
+				//printf("redactar historia de muerte");
+				
+				return 0;
+			}else if(decision=='b' && puntosVida<29){
+				printf("Bro has llegado tarde, te han despedido\n");
+				
+				//Aqui veremos puntos de muerte y destino
+				//printf("redactar historia de muerte");
+				return 0;
+			}else{
+				printf("Has introducido mal la opcion. Solo vale a o b\n");
+			}
+			system("PAUSE");
+		}while(decision!='a' && decision!='b' && decision!='c');
+		do{
+			printf("----------------------------------------------\n");
+			printf("\n");
+			printf("Se dice por ahi que va a haber un ascenso, va a haber que hacer una pequeña presentacion y un examen psicologico, lo haces?\n");
+			printf("a-Voy a ir a probar\nb-No, ya estoy muy comodo con el sueldo actual\nc-Voy al 100%, van a quedarse boquiabiertos, aunque eso requiera romper con mi pareja y/o familia\n");
+			fflush(stdin);
+			scanf("%c",&decision);
+		
+			if(decision=='a'){
+				puntosVida+=10;
+			}else if(decision=='b'){
+				puntosVida+=5;
+			}else if(decision=='c'){
+				puntosVida+=1;
+			}else{
+				printf("Has introducido mal la opcion. Solo vale a,b o c\n");
+			}
+			system("PAUSE");
+		}while(decision!='a' && decision!='b' && decision!='c');
+		
+		do{
+			printf("----------------------------------------------\n");
+			printf("\n");
+			printf("Es hora de decidir que vas a hacer con la casa\n");
+			printf("a-Vivir de alquiler y me podre cambiar de casa cuando quiera\nb-Compro casa porque es la que quiero, no tengo dudas, auque tenga que solicitar una hipoteca\nc-De hecho me voy a mudar a otra ciudad\n");
+			fflush(stdin);
+			scanf("%c",&decision);
+		
+			if(decision=='a'){
+				puntosVida+=1;
+			}else if(decision=='b'){
+				puntosVida+=5;
+			}else if(decision=='c'){
+				puntosVida+=10;
+			}else{
+				printf("Has introducido mal la opcion. Solo vale a,b o c\n");
+			}
+			system("PAUSE");
+		}while(decision!='a' && decision!='b' && decision!='c');
+		if(opcion=='a' || opcion=='b'){
+		do{
+			//EDAD JUBILACION 
+			printf("\n");
+			printf("---------------ETAPA JUBILADO------------------------\n");
+			printf("La verdad que nadie confiaba en que llegases a ser tan mayor, al menos los que te conocieron de joven ¡ENHORABUENA!\n");
+		
+			printf("--------------DECISION IMPORTANTE---------------------\n");
+			printf("Al final, como has organizado tu vida?\n");
+			printf("a- Voy a meter mis ahorros en una cuenta en un paraiso fiscal\nb-He dejado un poco de lado a mi familia por el trabajo\n");
+			fflush(stdin);
+			scanf("%c",&decision);
+		
+		
+			if(decision=='a'&& puntosVida>=20){
+				printf("Ahora a vivir la vida buena, aunque fuera de España, claro esta\n");
+				
+			}else if(decision=='b' && puntosVida>=29){
+				printf("Tu familia te esta agradecida aunque no van a volver a perdonarte si vuelves a alejarte por dinero\n");
+			
+			}else if(decision=='a'&& puntosVida<20){
+				printf("La policia te ha pillado, han congelado tus cuentas, has salido en la tele. Un grupo de jovenes cuyos padres trabajaban a tu cargo se han sentido estafados y te han seguido a casa. Has muerto asesinado\n");
+				
+				//Aqui veremos puntos de muerte y destino
+				//printf("redactar historia de muerte");
+				
+				return 0;
+			}else if(decision=='b' && puntosVida<29){
+				printf("Tu familia no ha podido olvidar que los dejaste de lado y ahora te han internado de una residencia\n");
+				
+				//Aqui veremos puntos de muerte y destino
+				//printf("redactar historia de muerte");
+				return 0;
+			}else{
+				printf("Has introducido mal la opcion. Solo vale a o b\n");
+			}
+			system("PAUSE");
+		}while(decision!='a' && decision!='b' && decision!='c');
+			
+		do{
+			printf("----------------------------------------------\n");
+			printf("uno de tus hijos va a tener un hijo prematuro, te pide ayuda y consejo\n");
+			printf("Como reaccionas?\n");
+			printf("a-Mi primer nieto!!Todo lo que haga falta voy a hacer\nb-Mi primer nieto!!Estoy mayor pero hare lo que pueda\nc-Tu hijo, tu responsabilidad\n");
+			fflush(stdin);
+			scanf("%c",&decision);
+		
+		
+			if(decision=='a'){
+				printf("Pero recuerda que no es tu hijo eh\n");
+				puntosVida+=10;
+			}else if(decision=='b'){
+				printf("Te agradece mucho el esfuerzo\n");
+				puntosVida+=5;
+			}else if(decision=='c'){
+				printf("Joe de verdad que egoista eres a veces\n");
+				puntosVida+=1;
+			}else{
+				printf("Has introducido mal la opcion. Solo vale a,b o c\n");
+			}
+			system("PAUSE");
+		}while(decision!='a' && decision!='b' && decision!='c');
+		
+		do{
+			printf("----------------------------------------------\n");
+			printf("Discusion entre tu hijo y tu nieto\n");
+			printf("Que haces?\n");
+			printf("a-Apoyar a tu nieto contando una historia dejando en evidencia a tu hijo\nb-Apoyar a tu hijo, ser padre es dificil\nc-Te vas y evitas participar\n");
+			fflush(stdin);
+			scanf("%c",&decision);
+		
+			if(decision=='a'){
+				printf("Tu niet te adora, pero te espera una bronca por parte de tu hijo\n");
+				puntosVida+=1;
+			}else if(decision=='b'){
+				printf("Gracias papa; EN SERIO ABUELO?\n");
+				puntosVida+=10;
+			}else if(decision=='c'){
+				printf("Chuches para todos, ya habra tiempo de hablarlo\n");
+				puntosVida+=5;
+			}else{
+				printf("Has introducido mal la opcion. Solo vale a,b o c\n");
+			}
+			system("PAUSE");
+		}while(decision!='a' && decision!='b' && decision!='c');
+		
+			printf("----------------------------------------------\n");
+			printf("CORONAVIRUS se recomienda que te quedes en casa\n");
+			printf("Que sucede?\n");
+			
+			longitudUsuario=strlen(usuarioInicio);
+			
+			if(longitudUsuario%2==0){
+				printf("Lo cogiste antes de la alerta, mueres solo en casa\n");
+			}else{
+				printf("Ten cuidado, eres poblacion de riesgo\n");
+			}
+			system("PAUSE");
+		
+		do{
+			printf("--------------------CUESTION IMPORTANTE--------------------------\n");
+			printf("Has de bajar a hacer la compra\n");
+			printf("Que haces?\n");
+			printf("a-Avisar a tus vecinos\nb-Avisar a tu hijo\nc-Bajar porque tengo dos piernas y dos brazos\n");
+			fflush(stdin);
+			scanf("%c",&decision);
+		
+			if(decision=='a'){
+				printf("Tus vecinos van a hacerte a compra, no hay de que preocuparse\n");
+				puntosVida+=10;
+			}else if(decision=='b'){
+				printf("Lo siente pero tiene que mirar por su bien, vas a tener que ir tu, el tiene ninos pequenos que no se cuidan solos\n");
+				puntosVida+=0;
+			}else if(decision=='c'){
+				printf("Te lo has buscado tu solo, has muerto\n");
+			}else{
+				printf("Has introducido mal la opcion. Solo vale a,b o c\n");
+			}
+			system("PAUSE");
+		}while(decision!='a' && decision!='b' && decision!='c');
+		
+			printf("----------------------------------------------\n");
+			printf("Feliz 103 cumpleanos!\n");
+			printf("En realidad te estas muriendo, tu funeral es\n");
+			
+			longitudUsuario=strlen(usuarioInicio);
+			
+			if(longitudUsuario%2==0){
+				printf("Multitudinario, todos te quieren mucho, pero es un poco deprimente\n");
+			}else{
+				printf("Pequeno, solo los mas cercanos estan, te recuerdan y saben que tu deseaba una gran fiesta\n");
+			}
+			system("PAUSE");
 		}
 	}while(opcion!='d');
 }
