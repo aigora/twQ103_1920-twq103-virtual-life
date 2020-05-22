@@ -1,7 +1,7 @@
 # Virtual-Life
 
 virtual-Life es un juego donde experimentarás una vida virtual desde tu nacimiento hasta tu muerte donde, como en la vida real,
-cada decisión cuenta... ¿la vida es casualidad o causaidad?
+cada decisión cuenta... ¿la vida es casualidad o causalidad?
 
 ## Integrantes del equipo
 
